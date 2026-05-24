@@ -1,7 +1,7 @@
 package hw13a.src;
 
-import javax.swing.*;
 import java.awt.*;
+import javax.swing.*;
 
 public class CalculatorGUI extends JFrame {
     private JTextField display;
