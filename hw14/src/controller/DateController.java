@@ -45,6 +45,7 @@ public class DateController {
             return "";
         }, model.selectedDateProperty(), formatComboBox.valueProperty()));
 
+        applyButton.disableProperty().bind(
             Bindings.createBooleanBinding(() -> {
                 String text = inputNumberField.getText();
                 boolean isInvalid = text == null || !text.matches("\\d+");
@@ -67,7 +68,7 @@ public class DateController {
             int amount = Integer.parseInt(inputNumberField.getText());
             model.calculateDate(amount, directionComboBox.getValue(), unitComboBox.getValue());
         } catch (NumberFormatException e) {
-            errorLabel.setText("Lỗi nhập liệu!"); // Xử lý edge cases
+            errorLabel.setText("Lỗi nhập liệu!"); // Xử lý edge cases [cite: 65]
         }
     }
 }
